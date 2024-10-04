@@ -8,7 +8,9 @@ Route::get('/', function () {
 });
 
 Route::get('/jobs', function () {
-    return view('jobs', ['jobs' => Job::all()]);
+    return view('jobs', [
+        'jobs' => Job::all()
+    ]);
 });
 
 Route::get('/jobs/{id}', function ($id) {
@@ -20,3 +22,5 @@ Route::get('/jobs/{id}', function ($id) {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+
